@@ -37,6 +37,7 @@ board = Board()
 board.set_grid(hard) 
 
 board.print()
+print(board.grid[0][0].candidates)
  
 if(board.solve_by_backtracking(0)):
     board.print()
