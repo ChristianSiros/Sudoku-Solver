@@ -3,8 +3,7 @@ class Cell:
         self.row = row
         self.col = col
         self.value = 0
-        self.candidates = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-        self.num_candidates = len(self.candidates)
+        self.candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     def set_value(self, value):
         self.value = value
@@ -16,4 +15,4 @@ class Cell:
         return self.candidates
     
     def get_num_candidates(self):
-        return self.num_candidates
+        return len(self.candidates)

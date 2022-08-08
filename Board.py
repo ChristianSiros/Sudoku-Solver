@@ -54,6 +54,14 @@ class Board:
                 if self.grid[i + startRow][j + startCol].get_value() == num:
                     return False
         return True
+
+    def candidate_check(self):
+        for index in range(81):
+            cell = self.grid[math.floor(index/9)][index % 9]
+            if(cell.get_num_candidates == 1):
+                cell.set_value(cell.candidates[0])
+
+
  
     def solve_by_backtracking(self, index):
         row = math.floor(index/9)
